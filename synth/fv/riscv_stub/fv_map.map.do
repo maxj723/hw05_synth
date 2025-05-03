@@ -304,6 +304,11 @@ add mapped point ID_EX_pc4[28]/q ID_EX_pc4_reg[28]/o -type DFF DFF
 add mapped point ID_EX_pc4[29]/q ID_EX_pc4_reg[29]/o -type DFF DFF
 add mapped point ID_EX_pc4[30]/q ID_EX_pc4_reg[30]/o -type DFF DFF
 add mapped point ID_EX_pc4[31]/q ID_EX_pc4_reg[31]/o -type DFF DFF
+add mapped point ID_EX_rd[0]/q ID_EX_rd_reg[0]/o -type DFF DFF
+add mapped point ID_EX_rd[1]/q ID_EX_rd_reg[1]/o -type DFF DFF
+add mapped point ID_EX_rd[2]/q ID_EX_rd_reg[2]/o -type DFF DFF
+add mapped point ID_EX_rd[3]/q ID_EX_rd_reg[3]/o -type DFF DFF
+add mapped point ID_EX_rd[4]/q ID_EX_rd_reg[4]/o -type DFF DFF
 add mapped point ID_EX_reg_write/q ID_EX_reg_write_reg/o -type DFF DFF
 add mapped point ID_EX_rs1[0]/q ID_EX_rs1_reg[0]/o -type DFF DFF
 add mapped point ID_EX_rs1[1]/q ID_EX_rs1_reg[1]/o -type DFF DFF
@@ -456,11 +461,6 @@ add mapped point EX_MEM_alu_result[28]/q EX_MEM_alu_result_reg[28]/o -type DFF D
 add mapped point EX_MEM_alu_result[29]/q EX_MEM_alu_result_reg[29]/o -type DFF DFF
 add mapped point EX_MEM_alu_result[30]/q EX_MEM_alu_result_reg[30]/o -type DFF DFF
 add mapped point EX_MEM_alu_result[31]/q EX_MEM_alu_result_reg[31]/o -type DFF DFF
-add mapped point ID_EX_rd[0]/q ID_EX_rd_reg[0]/o -type DFF DFF
-add mapped point ID_EX_rd[1]/q ID_EX_rd_reg[1]/o -type DFF DFF
-add mapped point ID_EX_rd[2]/q ID_EX_rd_reg[2]/o -type DFF DFF
-add mapped point ID_EX_rd[3]/q ID_EX_rd_reg[3]/o -type DFF DFF
-add mapped point ID_EX_rd[4]/q ID_EX_rd_reg[4]/o -type DFF DFF
 add mapped point IF_ID_instr[0]/q IF_ID_instr_reg[0]/o -type DFF DFF
 add mapped point IF_ID_instr[1]/q IF_ID_instr_reg[1]/o -type DFF DFF
 add mapped point IF_ID_instr[2]/q IF_ID_instr_reg[2]/o -type DFF DFF
