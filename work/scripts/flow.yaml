@@ -1,0 +1,423 @@
+%TAG ! tag:flow.stylus.cadence.com,0.1:
+---
+#############################################################################################
+# Flow  Setup
+#############################################################################################
+# Generated using: Flowkit v21.12-s019_1
+# Command: write_flow_template -type stylus -tools innovus -enable_feature { opt_early_cts } -optional_feature {  clock_flexible_htree      opt_eco                   opt_signoff               report_defer              report_inline             report_none               route_track_opt           } -tech_steps {  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/add_tap_cells.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/pre_place_bonus_fib.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/pre_place_fiducial.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/check_floorplan.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/global_net_connect.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_boundary_ws.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_boundary_si_blockage.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_check_grid.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/init_innovus_intel.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_macro_ws.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/insert_antenna_diodes_on_input.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_pg_grid.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_pg_grid_procs.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_rectilinear_routing_blockage.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_row.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/add_tracks.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/macro_placement.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/create_top_pg_pin.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/ndr_definition.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/write_oas.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/extend_tgoxid.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/remove_boundary_blockage.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/init_genus_intel.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/init_tempus_intel.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/pre_db.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/remap_data_cells.tcl  /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/edit_flow_sequence.tcl  }
+
+# Provide a memorable comment to describe this yaml file
+remarks:
+
+# Directory root of the flow scripts, can be used with file join to normalize paths to flow files.
+# Relative paths are normalized in context of the current file's location
+init_flow_directory: .
+
+# Specify scripts that will be automatically sourced in all tools
+#   these scripts will be run every time each tool initializes
+include_scripts:
+
+# Specify scripts that define procs
+#   these are available during flow_step execution
+include_procs:
+
+#############################################################################################
+# Feature Definition
+#############################################################################################
+# +-----------------------+-------------------------------------------------------------------+----------+---------+-------+
+# | Feature               | Description                                                       | Value    | Default | Valid |
+# +-----------------------+-------------------------------------------------------------------+----------+---------+-------+
+# | -clock_flexible_htree | Build flexible H-tree structure for clock nets                    | optional |         | 0 1 {} |
+# | -dynamic_view         | single dynamic analysis_view to activate                          |          |         |       |
+# | -hold_views           | list of hold analysis_views to activate                           |          |         |       |
+# | -leakage_view         | single leakage analysis_view to activate                          |          |         |       |
+# | -opt_early_cts        | Implement early clock tree for use during prects optimization     | enabled  |         | 0 1 {} |
+# | -opt_eco              | Run opt_design during eco flow                                    | optional |         | 0 1 {} |
+# | -opt_signoff          | Run opt_signoff during implementation flow                        | optional |         | 0 1 {} |
+# --- the following features are mutually exclusive (report_style group)
+# | -report_defer         | Defer report generation                                           | optional |         | 0 1 {} |
+# | -report_inline        | Run report generation as part of parent flow versus schedule_flow | optional |         | 0 1 {} |
+# | -report_none          | Disable report generation                                         | optional |         | 0 1 {} |
+# ---
+# | -route_track_opt      | Adds track based optimization to route_design                     | optional |         | 0 1 {} |
+# | -setup_views          | list of setup analysis_views to activate                          |          |         |       |
+# +-----------------------+-------------------------------------------------------------------+----------+---------+-------+
+define_feature:
+  report_inline:
+    description: Run report generation as part of parent flow versus schedule_flow
+    type: bool
+  report_defer:
+    description: Defer report generation
+    type: bool
+  report_none:
+    description: Disable report generation
+    type: bool
+  clock_flexible_htree:
+    description: Build flexible H-tree structure for clock nets
+    type: bool
+  route_track_opt:
+    description: Adds track based optimization to route_design
+    type: bool
+  opt_signoff:
+    description: Run opt_signoff during implementation flow
+    type: bool
+  opt_eco:
+    description: Run opt_design during eco flow
+    type: bool
+  setup_views:
+    description: list of setup analysis_views to activate
+    type: string
+    required: 0
+  hold_views:
+    description: list of hold analysis_views to activate
+    type: string
+    required: 0
+  dynamic_view:
+    description: single dynamic analysis_view to activate
+    type: string
+    required: 0
+  leakage_view:
+    description: single leakage analysis_view to activate
+    type: string
+    required: 0
+
+# Optional features in the above table can enabled below by adding them as space separated options
+#   eg: features: -report_inline -report_lec
+features:
+
+#############################################################################################
+# Flow Step Definitions
+#
+# default_flow_steps : Flow steps that come from the tool templates (write_flow_template)
+#                       DO NOT MODIFY
+# tech_flow_steps    : Technology dependent flow steps that are required to place, route and
+#                       optimize a DRC clean design
+# ip_flow_steps      : Flow steps for integrating IP
+# user_flow_steps    : Flow steps which require user modifications to replace PLACEHOLDER
+#                       content and fine tune the flow for specific needs
+#
+#############################################################################################
+default_flow_steps:
+  - flow/common_flows.tcl
+  - flow/common_steps.tcl
+  - flow/innovus_steps.tcl
+
+tech_flow_steps:
+  - tech/add_tap_cells.tcl
+  - tech/pre_place_bonus_fib.tcl
+  - tech/pre_place_fiducial.tcl
+  - tech/check_floorplan.tcl
+  - tech/global_net_connect.tcl
+  - tech/create_boundary_ws.tcl
+  - tech/create_boundary_si_blockage.tcl
+  - tech/create_check_grid.tcl
+  - tech/init_innovus_intel.tcl
+  - tech/create_macro_ws.tcl
+  - tech/insert_antenna_diodes_on_input.tcl
+  - tech/create_pg_grid.tcl
+  - tech/create_pg_grid_procs.tcl
+  - tech/create_rectilinear_routing_blockage.tcl
+  - tech/create_row.tcl
+  - tech/add_tracks.tcl
+  - tech/macro_placement.tcl
+  - tech/create_top_pg_pin.tcl
+  - tech/ndr_definition.tcl
+  - tech/write_oas.tcl
+  - tech/extend_tgoxid.tcl
+  - tech/remove_boundary_blockage.tcl
+  - tech/init_genus_intel.tcl
+  - tech/init_tempus_intel.tcl
+  - tech/pre_db.tcl
+  - tech/remap_data_cells.tcl
+
+ip_flow_steps:
+
+user_flow_steps:
+  - design_config.tcl
+  - eco_config.tcl
+  - flow_config.tcl
+  - innovus_config.tcl
+
+# Specify the flows that will be run, in order
+flow_current: implementation
+
+#############################################################################################
+# General Flow Configuration
+#############################################################################################
+
+# Identify the simple design data yaml file to be used
+design_yaml: setup.yaml
+
+#############################################################################################
+# Flow Definitions
+#
+#  Common modifications are:
+#    1. comment out a step by adding in a '#', eg  #  - step_does_not_run:
+#    2. delete a line to remove the step
+#    3. reorder defined flow_steps and flows
+#    4. add a single command inline,           eg # CMD_<step_name>: <cmd>
+#    5. add file contents inline,              eg # FILE_<step_name>: <filename>
+#    6. change the parameters, see the comment at the end of each line
+#############################################################################################
+flows:
+
+#-------------------------------------------------------------------------------
+# implementation
+#-------------------------------------------------------------------------------
+  implementation:
+    args: -tool innovus -owner cadence -skip_metric -tool_options -disable_user_startup
+    features:
+    steps:
+      - floorplan:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_design:
+                args: -owner cadence
+                features:
+                steps:
+                  - read_mmmc:
+                  - read_physical:
+                  - read_netlist:
+                  - read_power_intent:
+                  - run_init_design:
+            - init_innovus:
+            - set_dont_use:
+            - init_floorplan:
+            - commit_power_intent:
+            - ndr_definition:
+            - create_row:
+            - add_tracks:
+            - macro_placement:
+            - create_macro_ws:
+            - create_rectilinear_routing_blockage:
+            - global_net_connect:
+            - create_pg_grid_procs:
+            - create_pg_grid:
+            - create_boundary_ws:
+            - create_boundary_si_blockage:
+            - pre_place_bonus_fib:
+            - add_tap_cells:
+            - pre_place_fiducial:
+            - insert_antenna_diodes_on_input:
+            - create_check_grid:
+            - create_top_pg_pin:
+            - check_floorplan:
+            - block_finish:
+            - report_floorplan:
+                args: -owner cadence
+                features:
+                enabled: "!report_none && report_inline && !report_defer"
+                steps:
+                  - report_start:
+                  - init_innovus:
+                  - report_check_design:
+                  - report_area_innovus:
+                  - report_route_drc:
+                  - report_finish:
+            - SCHEDULE:
+                args: -flow report_floorplan -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_floorplan -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - prects:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_innovus:
+            - add_clock_spec:
+            - add_clock_htree_spec:
+                enabled: "clock_flexible_htree"
+            - add_clock_route_types:
+            - commit_route_types:
+            - add_clock_htree:
+                enabled: "opt_early_cts && clock_flexible_htree"
+            - run_place_opt:
+            - block_finish:
+            - report_prects:
+                args: -owner cadence
+                features:
+                enabled: "!report_none && report_inline && !report_defer"
+                steps:
+                  - report_start:
+                  - init_innovus:
+                  - report_check_design:
+                  - report_area_innovus:
+                  - report_late_summary_innovus:
+                  - report_late_paths:
+                  - report_power_innovus:
+                  - report_finish:
+            - SCHEDULE:
+                args: -flow report_prects -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_prects -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - cts:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_innovus:
+            - add_clock_tree:
+            - add_tieoffs:
+            - block_finish:
+            - report_postcts:
+                enabled: "!report_none && report_inline && !report_defer"
+            - SCHEDULE:
+                args: -flow report_postcts -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_postcts -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - postcts:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_innovus:
+            - run_opt_postcts_hold:
+            - block_finish:
+            - report_postcts:
+                enabled: "!report_none && report_inline && !report_defer"
+            - SCHEDULE:
+                args: -flow report_postcts -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_postcts -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - route:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_innovus:
+            - add_fillers:
+            - run_route:
+            - block_finish:
+            - report_postroute:
+                enabled: "!report_none && report_inline && !report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - postroute:
+          args: -owner cadence
+          features:
+          steps:
+            - block_start:
+            - init_innovus:
+            - run_opt_postroute:
+            - extend_tgoxid:
+            - remove_boundary_blockage:
+            - block_finish:
+            - write_oas:
+            - report_postroute:
+                enabled: "!report_none && report_inline && !report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+      - opt_signoff:
+          args: -owner cadence
+          features:
+          enabled: "!flow_express && opt_signoff"
+          steps:
+            - block_start:
+            - init_innovus:
+            - read_parasitics:
+            - run_opt_signoff:
+            - block_finish:
+            - write_oas:
+            - report_postroute:
+                enabled: "!report_none && report_inline && !report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics -defer
+                enabled: "!report_none && !report_inline && report_defer"
+            - SCHEDULE:
+                args: -flow report_postroute -include_in_metrics
+                enabled: "!report_none && !report_inline && !report_defer"
+
+#-------------------------------------------------------------------------------
+# init_innovus
+#-------------------------------------------------------------------------------
+  init_innovus:
+    args: -owner cadence -tool innovus
+    features:
+    steps:
+      - init_innovus_yaml:
+      - init_innovus_intel:
+      - init_innovus_user:
+
+#-------------------------------------------------------------------------------
+# eco
+#-------------------------------------------------------------------------------
+  eco:
+    args: -owner cadence -tool innovus -tool_options -disable_user_startup
+    features:
+    steps:
+      - eco_start:
+      - init_innovus:
+      - init_eco:
+      - run_place_eco:
+      - run_route_eco:
+      - run_opt_eco:
+          enabled: "opt_eco"
+      - eco_finish:
+      - report_postroute:
+          enabled: "!report_none && report_inline && !report_defer"
+      - SCHEDULE:
+          args: -flow report_postroute -include_in_metrics -defer
+          enabled: "!report_none && !report_inline && report_defer"
+      - SCHEDULE:
+          args: -flow report_postroute -include_in_metrics
+          enabled: "!report_none && !report_inline && !report_defer"
+
+#-------------------------------------------------------------------------------
+# report_postcts
+#-------------------------------------------------------------------------------
+  report_postcts:
+    args: -owner cadence -tool innovus -tool_options -disable_user_startup
+    features:
+    enabled: "!report_none"
+    steps:
+      - report_start:
+      - init_innovus:
+      - report_check_design:
+      - report_area_innovus:
+      - report_early_summary_innovus:
+      - report_early_paths:
+      - report_late_summary_innovus:
+      - report_late_paths:
+      - report_clock_timing:
+      - report_power_innovus:
+      - report_finish:
+
+#-------------------------------------------------------------------------------
+# report_postroute
+#-------------------------------------------------------------------------------
+  report_postroute:
+    args: -owner cadence -tool innovus -tool_options -disable_user_startup
+    features:
+    enabled: "!report_none"
+    steps:
+      - report_start:
+      - init_innovus:
+      - report_check_design:
+      - report_area_innovus:
+      - report_early_summary_innovus:
+      - report_early_paths:
+      - report_late_summary_innovus:
+      - report_late_paths:
+      - report_clock_timing:
+      - report_power_innovus:
+      - report_route_drc:
+      - report_route_density:
+      - report_finish:

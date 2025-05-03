@@ -1,0 +1,3 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_library_set -name nom -timing {../../intel16libs/std_cells/base_nom/lib/lib224_b0m_6t_108pp_base_nom_pfff_0p680v_125c_tttt_ctyp_ccslnt.lib.gz ../../intel16libs/std_cells/seq_nom/lib/lib224_b0m_6t_108pp_seq_nom_pfff_0p680v_125c_tttt_ctyp_ccslnt.lib.gz}

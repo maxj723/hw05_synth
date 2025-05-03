@@ -1,0 +1,310 @@
+xrun(64): 23.09-s005: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s005: Started on Apr 29, 2025 at 19:33:50 EDT
+xrun
+	-f run.f
+		../src/riscv_stub.sv
+		../tb/memories.sv
+		../tb/riscv_stub_tb.sv
+		-top riscv_stub_tb
+	-R
+xrun: *W,CSSF: -TOP with -R option will be ignored.
+xrun: *W,CSSF: HDL source files with -R option will be ignored.
+Loading snapshot worklib.riscv_stub_tb:sv .................... Done
+xcelium> source /escnfs/home/csesoft/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+Cycle           0:
+Instruction Memory Bus:
+  i_addr: 00000028
+  i_data: 00000000
+IF Stage:
+  PC: 00000028
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           1:
+Instruction Memory Bus:
+  i_addr: 0000002c
+  i_data: 00000000
+IF Stage:
+  PC: 0000002c
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           2:
+Instruction Memory Bus:
+  i_addr: 00000030
+  i_data: 00000000
+IF Stage:
+  PC: 00000030
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           3:
+Instruction Memory Bus:
+  i_addr: 00000034
+  i_data: 00000000
+IF Stage:
+  PC: 00000034
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           4:
+Instruction Memory Bus:
+  i_addr: 00000038
+  i_data: 00000000
+IF Stage:
+  PC: 00000038
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           5:
+Instruction Memory Bus:
+  i_addr: 0000003c
+  i_data: 00000000
+IF Stage:
+  PC: 0000003c
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           6:
+Instruction Memory Bus:
+  i_addr: 00000040
+  i_data: 00000000
+IF Stage:
+  PC: 00000040
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           7:
+Instruction Memory Bus:
+  i_addr: 00000044
+  i_data: 00000000
+IF Stage:
+  PC: 00000044
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           8:
+Instruction Memory Bus:
+  i_addr: 00000048
+  i_data: 00000000
+IF Stage:
+  PC: 00000048
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Cycle           9:
+Instruction Memory Bus:
+  i_addr: 0000004c
+  i_data: 00000000
+IF Stage:
+  PC: 0000004c
+  Instruction: 00000000
+ID Stage:
+  Opcode: 0000000
+  Rs1 Address:  0
+  Rs2 Address:  0
+  Rd Address:  0
+  Immediate: 00000000
+EX Stage:
+  ALU Operation: 0000
+  Rs1 Data: 00000000
+  Rs2 Data: 00000000
+  Immediate: 00000000
+  ALU Result: 00000000
+MEM Stage:
+  Memory Address: 00000000
+  Memory Write Data: 00000000
+  Memory Read Data: 00000000
+WB Stage:
+  Register Write Enable: 0
+  Register Write Address:  0
+  Register Write Data: 00000000
+--------------------------------
+Register x1:          0
+Register x2:          0
+Register x3:          0
+Register x4:          0
+xmsim: *E,ASRTST (../tb/riscv_stub_tb.sv,117): (time 215 NS) Assertion riscv_stub_tb.__assert_1 has failed
+Assertion failed: x1 should be 1
+xmsim: *E,ASRTST (../tb/riscv_stub_tb.sv,118): (time 215 NS) Assertion riscv_stub_tb.__assert_2 has failed
+Assertion failed: x2 should be 2
+xmsim: *E,ASRTST (../tb/riscv_stub_tb.sv,119): (time 215 NS) Assertion riscv_stub_tb.__assert_3 has failed
+Assertion failed: x3 should be 3
+xmsim: *E,ASRTST (../tb/riscv_stub_tb.sv,120): (time 215 NS) Assertion riscv_stub_tb.__assert_4 has failed
+Assertion failed: x4 should be -2
+Simulation complete via $finish(1) at time 215 NS + 0
+../tb/riscv_stub_tb.sv:123         $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s005: Exiting on Apr 29, 2025 at 19:33:51 EDT  (total: 00:00:01)

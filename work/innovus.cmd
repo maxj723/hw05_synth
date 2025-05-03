@@ -1,0 +1,112 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed Apr 17 07:48:24 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+[sjoshi2@cepheus arm]$ mv gf ../../vol2/ARM/.
+#@ source $env(TECH_MODULE_DIR)/write_flow_template.tcl
+#@ Begin verbose source (pre): source $env(TECH_MODULE_DIR)/write_flow_template.tcl
+write_flow_template \
+  -dir $env(PWD)/scripts \
+  -type stylus \
+  -tools {genus innovus tempus} \
+  -enable_feature { opt_early_cts report_ipba } \
+  -optional_feature { \
+  clock_flexible_htree     \
+  dft_compressor           \
+  dft_simple               \
+  opt_eco                  \
+  opt_signoff              \
+  report_defer             \
+  report_inline            \
+  report_none              \
+  route_track_opt          \
+  synth_hybrid             \
+  } \
+ -tech_steps  " \
+  $env(TECH_MODULE_DIR)/add_tap_cells.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_bonus_fib.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_fiducial.tcl \
+  $env(TECH_MODULE_DIR)/check_floorplan.tcl \
+  $env(TECH_MODULE_DIR)/global_net_connect.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_ws.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_si_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_check_grid.tcl \
+  $env(TECH_MODULE_DIR)/init_innovus_intel.tcl \
+  $env(TECH_MODULE_DIR)/create_macro_ws.tcl \
+  $env(TECH_MODULE_DIR)/insert_antenna_diodes_on_input.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid_procs.tcl \
+  $env(TECH_MODULE_DIR)/create_rectilinear_routing_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_row.tcl \
+  $env(TECH_MODULE_DIR)/add_tracks.tcl \
+  $env(TECH_MODULE_DIR)/macro_placement.tcl \
+  $env(TECH_MODULE_DIR)/create_top_pg_pin.tcl \
+  $env(TECH_MODULE_DIR)/ndr_definition.tcl \
+  $env(TECH_MODULE_DIR)/write_oas.tcl \
+  $env(TECH_MODULE_DIR)/extend_tgoxid.tcl \
+  $env(TECH_MODULE_DIR)/remove_boundary_blockage.tcl \
+  $env(TECH_MODULE_DIR)/init_genus_intel.tcl \
+  $env(TECH_MODULE_DIR)/init_tempus_intel.tcl \
+  $env(TECH_MODULE_DIR)/pre_db.tcl \
+  $env(TECH_MODULE_DIR)/remap_data_cells.tcl \
+  $env(TECH_MODULE_DIR)/edit_flow_sequence.tcl \
+  "
+#@ End verbose source /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/write_flow_template.tcl
+#@ source $env(TECH_MODULE_DIR)/write_flow_template_innovusonly.tcl
+#@ Begin verbose source (pre): source $env(TECH_MODULE_DIR)/write_flow_template_innovusonly.tcl
+write_flow_template \
+  -dir $env(PWD)/scripts \
+  -type stylus \
+  -tools {innovus} \
+  -enable_feature { opt_early_cts } \
+  -optional_feature { \
+  clock_flexible_htree     \
+  opt_eco                  \
+  opt_signoff              \
+  report_defer             \
+  report_inline            \
+  report_none              \
+  route_track_opt          \
+  } \
+ -tech_steps  " \
+  $env(TECH_MODULE_DIR)/add_tap_cells.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_bonus_fib.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_fiducial.tcl \
+  $env(TECH_MODULE_DIR)/check_floorplan.tcl \
+  $env(TECH_MODULE_DIR)/global_net_connect.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_ws.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_si_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_check_grid.tcl \
+  $env(TECH_MODULE_DIR)/init_innovus_intel.tcl \
+  $env(TECH_MODULE_DIR)/create_macro_ws.tcl \
+  $env(TECH_MODULE_DIR)/insert_antenna_diodes_on_input.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid_procs.tcl \
+  $env(TECH_MODULE_DIR)/create_rectilinear_routing_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_row.tcl \
+  $env(TECH_MODULE_DIR)/add_tracks.tcl \
+  $env(TECH_MODULE_DIR)/macro_placement.tcl \
+  $env(TECH_MODULE_DIR)/create_top_pg_pin.tcl \
+  $env(TECH_MODULE_DIR)/ndr_definition.tcl \
+  $env(TECH_MODULE_DIR)/write_oas.tcl \
+  $env(TECH_MODULE_DIR)/extend_tgoxid.tcl \
+  $env(TECH_MODULE_DIR)/remove_boundary_blockage.tcl \
+  $env(TECH_MODULE_DIR)/init_genus_intel.tcl \
+  $env(TECH_MODULE_DIR)/init_tempus_intel.tcl \
+  $env(TECH_MODULE_DIR)/pre_db.tcl \
+  $env(TECH_MODULE_DIR)/remap_data_cells.tcl \
+  $env(TECH_MODULE_DIR)/edit_flow_sequence.tcl \
+  "
+#@ End verbose source: /escnfs/courses/sp24-cse-60762.01/public/intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/write_flow_template_innovusonly.tcl
+exit

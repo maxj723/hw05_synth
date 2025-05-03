@@ -1,0 +1,25 @@
+# test_jal.s
+.globl _start
+_start:
+  # PC = 0x00
+  addi x10, x0, 1   # Execute this
+
+  # PC = 0x04
+  jal x1, target    # Jump to target. x1 (ra) should become 0x08. PC becomes 'target' addr (0x14)
+
+  # PC = 0x08 (Fetch happens before jump redirects) - SHOULD BE FLUSHED
+  addi x2, x0, 2    # This instruction should NOT execute / commit
+
+  # PC = 0x0C (Decode happens before jump redirects) - SHOULD BE FLUSHED
+  addi x3, x0, 3    # This instruction should NOT execute / commit
+
+  # PC = 0x10 - Maybe fetched by target, but should be replaced
+  addi x11, x0, 11
+
+target: # Address = 0x14 (5th instruction, 5*4=20=0x14)
+  # PC = 0x14 (Target of JAL)
+  addi x4, x0, 4    # This SHOULD execute after the jump
+  add  x5, x4, x1   # Test if link register (x1) is correct. x5 = 4 + 8 = 12
+
+halt: # Address = 0x1C
+  j halt

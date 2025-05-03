@@ -1,0 +1,94 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	-stylus -no_gui 
+Date:		Tue Apr 16 17:01:33 2024
+Host:		student04 (x86_64 w/Linux 3.10.0-1160.62.1.el7.x86_64) (8cores*32cpus*Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz 20480KB)
+OS:		Red Hat Enterprise Linux
+
+License:
+		[17:01:33.417657] Configured Lic search path (21.01-s002): /escnfs/home/csesoft/cadence/installs/license.txt
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_16686_student04_sjoshi2_CehaBH.
+
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+[INFO] Loading PVS 23.11 fill procedures
+**WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+@innovus 1> source $env(TECH_MODULE_DIR)/write_flow_template_innovusonly.tcl
+#@ Begin verbose source (pre): source $env(TECH_MODULE_DIR)/write_flow_template_innovusonly.tcl
+@@file 1: write_flow_template \
+  -dir $env(PWD)/scripts \
+  -type stylus \
+  -tools {innovus} \
+  -enable_feature { opt_early_cts } \
+  -optional_feature { \
+  clock_flexible_htree     \
+  opt_eco                  \
+  opt_signoff              \
+  report_defer             \
+  report_inline            \
+  report_none              \
+  route_track_opt          \
+  } \
+ -tech_steps  " \
+  $env(TECH_MODULE_DIR)/add_tap_cells.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_bonus_fib.tcl \
+  $env(TECH_MODULE_DIR)/pre_place_fiducial.tcl \
+  $env(TECH_MODULE_DIR)/check_floorplan.tcl \
+  $env(TECH_MODULE_DIR)/global_net_connect.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_ws.tcl \
+  $env(TECH_MODULE_DIR)/create_boundary_si_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_check_grid.tcl \
+  $env(TECH_MODULE_DIR)/init_innovus_intel.tcl \
+  $env(TECH_MODULE_DIR)/create_macro_ws.tcl \
+  $env(TECH_MODULE_DIR)/insert_antenna_diodes_on_input.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid.tcl \
+  $env(TECH_MODULE_DIR)/create_pg_grid_procs.tcl \
+  $env(TECH_MODULE_DIR)/create_rectilinear_routing_blockage.tcl \
+  $env(TECH_MODULE_DIR)/create_row.tcl \
+  $env(TECH_MODULE_DIR)/add_tracks.tcl \
+  $env(TECH_MODULE_DIR)/macro_placement.tcl \
+  $env(TECH_MODULE_DIR)/create_top_pg_pin.tcl \
+  $env(TECH_MODULE_DIR)/ndr_definition.tcl \
+  $env(TECH_MODULE_DIR)/write_oas.tcl \
+  $env(TECH_MODULE_DIR)/extend_tgoxid.tcl \
+  $env(TECH_MODULE_DIR)/remove_boundary_blockage.tcl \
+  $env(TECH_MODULE_DIR)/init_genus_intel.tcl \
+  $env(TECH_MODULE_DIR)/init_tempus_intel.tcl \
+  $env(TECH_MODULE_DIR)/pre_db.tcl \
+  $env(TECH_MODULE_DIR)/remap_data_cells.tcl \
+  $env(TECH_MODULE_DIR)/edit_flow_sequence.tcl \
+  "
+##FLOW_KIT:  generating tool provided flow type 'stylus'
+WARNING: edit_flow is not -unique of {pre_db} after {Cadence.plugin.flowkit.read_db.pre}. Use -unique option in edit_flow command, this is need for -tech_step option
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/flow/common_flows.tcl
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/innovus_config.template
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/flow/common_steps.tcl
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/design_config.template
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/flow_config.template
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/eco_config.template
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/flow/innovus_steps.tcl
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/flow.yaml_template
+WARNING: unable to represent edit_flow in flow.yaml_template of {remap_data_cells} after {synthesis.syn_opt.run_syn_opt}
+WARNING: unable to represent edit_flow in flow.yaml_template of {init_genus_intel} after {init_genus.init_genus_yaml}
+WARNING: unable to represent edit_flow in flow.yaml_template of {init_tempus_intel} after {init_tempus.init_tempus_yaml}
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/setup.yaml_template
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/metric_config.yaml
+Flowkit template writing file /escnfs/home/sjoshi2/soc_sp2024/work/scripts/dist.py
+#@ End verbose source: ../../intel16libs/adf224_r0.9HP1_c/asicflows/cadence/tech.dot4.6t108.tp0/write_flow_template_innovusonly.tcl
+@innovus 2> exit
+
+
+*** Memory Usage v#1 (Current mem = 954.879M, initial mem = 486.094M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:21.1, real=0:01:36, mem=954.9M) ---

@@ -1,0 +1,595 @@
+%TAG ! tag:design.stylus.cadence.com,0.1:
+---
+# Generated Using: Innovus 19.12-e057_1
+# Template Release: 1799864
+####################################################################################################
+# MMMC Config
+####################################################################################################
+# Flow paramters which relate to multi-mode, multi-corner (mmmc) setup.  The majority of items will
+# be consumed in the mmmc_config.tcl file
+####################################################################################################
+
+# Library Sets created using 'create_library_set'
+#---------------------------------------------------------------------------------------------------
+#   library_sets:
+#     <name>:
+#       library_files:
+#         - <list of library files (.lbd or .lib)>
+#     [ link_library_files:
+#         - <list of optional link library files (.lbd or .lib)> ]
+#     [ target_library_files:
+#         - <list of optional target library files (.lbd or .lib)> ]
+#     [ socv_files:
+#         - <list of optional SOCV variation library files> ]
+library_sets:
+  psss_0.765v_125c:
+    library_files:
+      - $env(INTEL_STDCELLS)/lvl_ulvt/lib//lib224_b0m_6t_108pp_lvl_ulvt_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lp/lib//lib224_b0m_6t_108pp_lvl_lp_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lvt/lib//lib224_b0m_6t_108pp_lvl_lvt_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_nom/lib//lib224_b0m_6t_108pp_lvl_nom_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_hp/lib//lib224_b0m_6t_108pp_lvl_hp_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_ulp/lib//lib224_b0m_6t_108pp_lvl_ulp_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lplvt/lib//lib224_b0m_6t_108pp_lvl_lplvt_psss_0p765v_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_ulp/lib//lib224_b0m_6t_108pp_spcl_ulp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_hp/lib//lib224_b0m_6t_108pp_spcl_hp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_nom/lib//lib224_b0m_6t_108pp_spcl_nom_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lplvt/lib//lib224_b0m_6t_108pp_spcl_lplvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lvt/lib//lib224_b0m_6t_108pp_spcl_lvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lp/lib//lib224_b0m_6t_108pp_spcl_lp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_ulvt/lib//lib224_b0m_6t_108pp_spcl_ulvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_ulvt/lib//lib224_b0m_6t_108pp_pwm_ulvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_nom/lib//lib224_b0m_6t_108pp_pwm_nom_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lvt/lib//lib224_b0m_6t_108pp_pwm_lvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_ulp/lib//lib224_b0m_6t_108pp_pwm_ulp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lp/lib//lib224_b0m_6t_108pp_pwm_lp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lplvt/lib//lib224_b0m_6t_108pp_pwm_lplvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_hp/lib//lib224_b0m_6t_108pp_pwm_hp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lplvt/lib//lib224_b0m_6t_108pp_base_lplvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_hp/lib//lib224_b0m_6t_108pp_base_hp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lp/lib//lib224_b0m_6t_108pp_base_lp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_nom/lib//lib224_b0m_6t_108pp_base_nom_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_ulvt/lib//lib224_b0m_6t_108pp_base_ulvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_ulp/lib//lib224_b0m_6t_108pp_base_ulp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lvt/lib//lib224_b0m_6t_108pp_base_lvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lplvt/lib//lib224_b0m_6t_108pp_seq_lplvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lp/lib//lib224_b0m_6t_108pp_seq_lp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_hp/lib//lib224_b0m_6t_108pp_seq_hp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_ulvt/lib//lib224_b0m_6t_108pp_seq_ulvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lvt/lib//lib224_b0m_6t_108pp_seq_lvt_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_ulp/lib//lib224_b0m_6t_108pp_seq_ulp_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_nom/lib//lib224_b0m_6t_108pp_seq_nom_psss_0p765v_125c_tttt_ctyp_ccslnt.lib.gz
+
+    socv_files:
+      - $env(INTEL_STDCELLS)/base_hp/socvd/lib224_b0m_6t_108pp_base_hp_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_lp/socvd/lib224_b0m_6t_108pp_base_lp_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_lplvt/socvd/lib224_b0m_6t_108pp_base_lplvt_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_lvt/socvd/lib224_b0m_6t_108pp_base_lvt_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_nom/socvd/lib224_b0m_6t_108pp_base_nom_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_ulp/socvd/lib224_b0m_6t_108pp_base_ulp_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+      - $env(INTEL_STDCELLS)/base_ulvt/socvd/lib224_b0m_6t_108pp_base_ulvt_psss_0p765v_125c_tttt_ctyp_setup_rs.socv
+        
+  pfff_0.890v_m40c:
+    library_files:
+      - $env(INTEL_STDCELLS)/lvl_nom/lib//lib224_b0m_6t_108pp_lvl_nom_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lvt/lib//lib224_b0m_6t_108pp_lvl_lvt_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_ulvt/lib//lib224_b0m_6t_108pp_lvl_ulvt_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_ulp/lib//lib224_b0m_6t_108pp_lvl_ulp_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lplvt/lib//lib224_b0m_6t_108pp_lvl_lplvt_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_hp/lib//lib224_b0m_6t_108pp_lvl_hp_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/lvl_lp/lib//lib224_b0m_6t_108pp_lvl_lp_pfff_0p890v_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lplvt/lib//lib224_b0m_6t_108pp_spcl_lplvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_hp/lib//lib224_b0m_6t_108pp_spcl_hp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_ulp/lib//lib224_b0m_6t_108pp_spcl_ulp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lvt/lib//lib224_b0m_6t_108pp_spcl_lvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_nom/lib//lib224_b0m_6t_108pp_spcl_nom_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_ulvt/lib//lib224_b0m_6t_108pp_spcl_ulvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/spcl_lp/lib//lib224_b0m_6t_108pp_spcl_lp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_ulvt/lib//lib224_b0m_6t_108pp_pwm_ulvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_ulp/lib//lib224_b0m_6t_108pp_pwm_ulp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_hp/lib//lib224_b0m_6t_108pp_pwm_hp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lvt/lib//lib224_b0m_6t_108pp_pwm_lvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_nom/lib//lib224_b0m_6t_108pp_pwm_nom_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lplvt/lib//lib224_b0m_6t_108pp_pwm_lplvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/pwm_lp/lib//lib224_b0m_6t_108pp_pwm_lp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_hp/lib//lib224_b0m_6t_108pp_base_hp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lp/lib//lib224_b0m_6t_108pp_base_lp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_ulp/lib//lib224_b0m_6t_108pp_base_ulp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_nom/lib//lib224_b0m_6t_108pp_base_nom_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_ulvt/lib//lib224_b0m_6t_108pp_base_ulvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lplvt/lib//lib224_b0m_6t_108pp_base_lplvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/base_lvt/lib//lib224_b0m_6t_108pp_base_lvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lp/lib//lib224_b0m_6t_108pp_seq_lp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lplvt/lib//lib224_b0m_6t_108pp_seq_lplvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_hp/lib//lib224_b0m_6t_108pp_seq_hp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_ulvt/lib//lib224_b0m_6t_108pp_seq_ulvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_lvt/lib//lib224_b0m_6t_108pp_seq_lvt_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_ulp/lib//lib224_b0m_6t_108pp_seq_ulp_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+      - $env(INTEL_STDCELLS)/seq_nom/lib//lib224_b0m_6t_108pp_seq_nom_pfff_0p890v_m40c_tttt_ctyp_ccslnt.lib.gz
+
+    socv_files:
+      - $env(INTEL_STDCELLS)/base_hp/socvd/lib224_b0m_6t_108pp_base_hp_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_lp/socvd/lib224_b0m_6t_108pp_base_lp_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_lplvt/socvd/lib224_b0m_6t_108pp_base_lplvt_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_lvt/socvd/lib224_b0m_6t_108pp_base_lvt_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_nom/socvd/lib224_b0m_6t_108pp_base_nom_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_ulp/socvd/lib224_b0m_6t_108pp_base_ulp_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+      - $env(INTEL_STDCELLS)/base_ulvt/socvd/lib224_b0m_6t_108pp_base_ulvt_pfff_0p890v_m40c_tttt_ctyp_hold_rscv.socv
+
+# Opconds to be created using 'create_opcond' (these are optional MMMC objects)
+#---------------------------------------------------------------------------------------------------
+#   opconds:
+#     <name>:
+#       process: <process for the opcond>
+#       temperature: <temperature for the opcond>
+#       voltage: <voltage for the opcond>
+opconds:
+  typical_1.00:
+    process:     1.0
+    temperature: 125
+    voltage:     0.765
+
+# Timing conditions to be created using 'create_timing_condition'
+#---------------------------------------------------------------------------------------------------
+#   timing_conditions:
+#     <name>:
+#       library_sets:
+#          - <list of library_set objects to associate to the timing_condition>
+#     [ opcond: <name of opcond for the timing_condition> ]"
+#     [ opcond_library: <name of library to search for the opcond> ]"
+timing_conditions:
+  psss_0.765v_125c_psss_125_FUNC_WORST:
+    library_sets:
+      - psss_0.765v_125c
+  pfff_0.890v_m40c_pfff_m40_FUNC_BEST:
+    library_sets:
+      - pfff_0.890v_m40c
+
+# RC corners to be created using 'create_rc_corner'
+#---------------------------------------------------------------------------------------------------
+#   rc_corners:
+#     <name>:
+#       temperature: <temperature for the rc corner>
+#       qrc_tech_file: <path to extraction technology file associated with the rc_corner >
+rc_corners:
+  psss_125_FUNC_WORST:
+    temperature:   125
+    qrc_tech_file: $env(INTEL_PDK)/extraction/qrc/techfiles/$env(LAYERSTACK)/pcss/qrcTechFile
+  pfff_m40_FUNC_BEST:
+    temperature: -40
+    qrc_tech_file: $env(INTEL_PDK)/extraction/qrc/techfiles/$env(LAYERSTACK)/pcff/qrcTechFile
+
+# Delay corners to be created using 'create_delay_corner'
+#---------------------------------------------------------------------------------------------------
+#   delay_corners:
+#     <name>:
+#       rc_corner:
+#            early: <early rc_corner>
+#            late: <late rc_corner>
+#       timing_condition:
+#            early: <early timing_condition for each power_domain>
+#            late: <late timing_condition for each power_domain>
+delay_corners:
+  psss_0.765v_125c_psss_125_FUNC_WORST:
+    rc_corner:
+      early: psss_125_FUNC_WORST
+      late:  psss_125_FUNC_WORST
+    timing_condition:
+      early: psss_0.765v_125c_psss_125_FUNC_WORST
+      late:  psss_0.765v_125c_psss_125_FUNC_WORST
+  pfff_0.890v_m40c_pfff_m40_FUNC_BEST:
+    rc_corner:
+      early: pfff_m40_FUNC_BEST
+      late:  pfff_m40_FUNC_BEST
+    timing_condition:
+      early: pfff_0.890v_m40c_pfff_m40_FUNC_BEST
+      late:  pfff_0.890v_m40c_pfff_m40_FUNC_BEST
+
+# Constraint modes to be created using 'create_constraint_mode'
+#---------------------------------------------------------------------------------------------------
+#   constraint_modes:
+#     <name>:
+#       sdc_files:
+#          -  <list of constraint files to associate with the constraint_mode>
+#     [ tcl_variables:
+#          -  <optional list of TCL variables defined as key/value pairs> ]
+
+#constraint_modes:
+#  < PLACEHOLDER: CONSTRAINT_MODE NAME >:
+#    sdc_files:
+#      - < PLACEHOLDER: CONSTRAINT_MODE SDC FILES >
+
+# Analysis views to be created using 'create_analysis_view'
+#---------------------------------------------------------------------------------------------------
+#   analysis_views:
+#     <name>:
+#       constraint_mode : <constraint_mode to associate to analysis_view>
+#       delay_corner : <delay_corner object to associate to analysis_view>
+#       is_setup : <enable analysis_view for setup timing analysis and optimization (true|false) >
+#       is_hold : <enable analysis_view for hold timing analysis and optimization (true|false) >
+#       is_dynamic : <enable analysis_view for dynamic power analysis and optimization (true|false) >
+#       is_leakage : <enable analysis_view for leakage power analysis and optimization (true|false) >
+analysis_views:
+  FUNC_WORST:
+    constraint_mode: func
+    delay_corner:  psss_0.765v_125c_psss_125_FUNC_WORST
+    is_setup:   true
+    is_hold:    false
+    is_dynamic: true
+    is_leakage: true
+  FUNC_BEST:
+    constraint_mode: func
+    delay_corner:  pfff_0.890v_m40c_pfff_m40_FUNC_BEST
+    is_setup:   false
+    is_hold:    true
+    is_dynamic: false
+    is_leakage: false
+
+####################################################################################################
+# Tool Config
+####################################################################################################
+# Flow parameters which relate to design and tool setup.  Majority of items will be consumed in the
+# 'init_design' and 'init_<TOOL>' flow_steps.
+####################################################################################################
+
+# 'init' related attributes
+#---------------------------------------------------------------------------------------------------
+# A YAML list of lef files or oa libraries read in by 'read_physical' command.
+init_physical_files:
+  lef_files:
+    - $env(INTEL_PDK)/apr/cadence/$env(LAYERSTACK)/6t108_tp0/p1222.lef
+    - $env(INTEL_STDCELLS)//base_hp/lef/lib224_b0m_6t_108pp_base_hp.lef
+    - $env(INTEL_STDCELLS)//base_lp/lef/lib224_b0m_6t_108pp_base_lp.lef
+    - $env(INTEL_STDCELLS)//base_lplvt/lef/lib224_b0m_6t_108pp_base_lplvt.lef
+    - $env(INTEL_STDCELLS)//base_lvt/lef/lib224_b0m_6t_108pp_base_lvt.lef
+    - $env(INTEL_STDCELLS)//base_nom/lef/lib224_b0m_6t_108pp_base_nom.lef
+    - $env(INTEL_STDCELLS)//base_ulp/lef/lib224_b0m_6t_108pp_base_ulp.lef
+    - $env(INTEL_STDCELLS)//base_ulvt/lef/lib224_b0m_6t_108pp_base_ulvt.lef
+    - $env(INTEL_STDCELLS)//lvl_hp/lef/lib224_b0m_6t_108pp_lvl_hp.lef
+    - $env(INTEL_STDCELLS)//lvl_lp/lef/lib224_b0m_6t_108pp_lvl_lp.lef
+    - $env(INTEL_STDCELLS)//lvl_lplvt/lef/lib224_b0m_6t_108pp_lvl_lplvt.lef
+    - $env(INTEL_STDCELLS)//lvl_lvt/lef/lib224_b0m_6t_108pp_lvl_lvt.lef
+    - $env(INTEL_STDCELLS)//lvl_nom/lef/lib224_b0m_6t_108pp_lvl_nom.lef
+    - $env(INTEL_STDCELLS)//lvl_ulp/lef/lib224_b0m_6t_108pp_lvl_ulp.lef
+    - $env(INTEL_STDCELLS)//lvl_ulvt/lef/lib224_b0m_6t_108pp_lvl_ulvt.lef
+    - $env(INTEL_STDCELLS)//pwm_hp/lef/lib224_b0m_6t_108pp_pwm_hp.lef
+    - $env(INTEL_STDCELLS)//pwm_lp/lef/lib224_b0m_6t_108pp_pwm_lp.lef
+    - $env(INTEL_STDCELLS)//pwm_lplvt/lef/lib224_b0m_6t_108pp_pwm_lplvt.lef
+    - $env(INTEL_STDCELLS)//pwm_lvt/lef/lib224_b0m_6t_108pp_pwm_lvt.lef
+    - $env(INTEL_STDCELLS)//pwm_nom/lef/lib224_b0m_6t_108pp_pwm_nom.lef
+    - $env(INTEL_STDCELLS)//pwm_ulp/lef/lib224_b0m_6t_108pp_pwm_ulp.lef
+    - $env(INTEL_STDCELLS)//pwm_ulvt/lef/lib224_b0m_6t_108pp_pwm_ulvt.lef
+    - $env(INTEL_STDCELLS)//seq_hp/lef/lib224_b0m_6t_108pp_seq_hp.lef
+    - $env(INTEL_STDCELLS)//seq_lp/lef/lib224_b0m_6t_108pp_seq_lp.lef
+    - $env(INTEL_STDCELLS)//seq_lplvt/lef/lib224_b0m_6t_108pp_seq_lplvt.lef
+    - $env(INTEL_STDCELLS)//seq_lvt/lef/lib224_b0m_6t_108pp_seq_lvt.lef
+    - $env(INTEL_STDCELLS)//seq_nom/lef/lib224_b0m_6t_108pp_seq_nom.lef
+    - $env(INTEL_STDCELLS)//seq_ulp/lef/lib224_b0m_6t_108pp_seq_ulp.lef
+    - $env(INTEL_STDCELLS)//seq_ulvt/lef/lib224_b0m_6t_108pp_seq_ulvt.lef
+    - $env(INTEL_STDCELLS)//spcl_hp/lef/lib224_b0m_6t_108pp_spcl_hp.lef
+    - $env(INTEL_STDCELLS)//spcl_lp/lef/lib224_b0m_6t_108pp_spcl_lp.lef
+    - $env(INTEL_STDCELLS)//spcl_lplvt/lef/lib224_b0m_6t_108pp_spcl_lplvt.lef
+    - $env(INTEL_STDCELLS)//spcl_lvt/lef/lib224_b0m_6t_108pp_spcl_lvt.lef
+    - $env(INTEL_STDCELLS)//spcl_nom/lef/lib224_b0m_6t_108pp_spcl_nom.lef
+    - $env(INTEL_STDCELLS)//spcl_ulp/lef/lib224_b0m_6t_108pp_spcl_ulp.lef
+    - $env(INTEL_STDCELLS)//spcl_ulvt/lef/lib224_b0m_6t_108pp_spcl_ulvt.lef
+    - $env(INTEL_TIC)/libraries/tic/lef/$env(LAYERSTACK)/intel22tic.lef
+    - $env(TECH_MODULE_DIR)/via_pillar.lef
+
+#  oa_ref_libs:
+#    - < PLACEHOLDER: LIST OF OA REF LIBS FOR READ_PHYSICAL >
+#  oa_search_libs:
+#    - < PLACEHOLDER: LIST OF OA SEARCH LIBS FOR READ_PHYSICAL >
+
+# A YAML list of power/ground net names used by 'init_design' command.  This is typically not necessary
+# when a power_intent file is specified.
+init_power_nets:
+  - vcc
+
+init_ground_nets:
+  - vss
+
+# Path to power_intent files which are keyed by power_intent type.  These entries will be
+# expanded and used by the 'read_power_intent' command.
+#   init_power_intent_files:
+#     cpf: < power intent file in CPF format >
+#     1801: < power intent file in 1801 format >
+#init_power_intent_files:
+#  cpf: < PLACEHOLDER: LIST OF CPF FILES FOR READ_POWER_INTENT >
+#  1801: < PLACEHOLDER: LIST OF 1801 FILES FOR READ_POWER_INTENT >
+
+# A YAML list of def files read in during 'init_floorplan' flow_step.  This can include both
+# floorplan and DFT related files.
+#init_def_files:
+#  - < PLACEHOLDER: LIST OF DEF FILES FOR READ_DEF >
+
+# Path to floorplan file read in during 'init_floorplan' flow_step.
+#init_floorplan_file: < PLACEHOLDER: A FLOORPLAN FILE FOR READ_FLOORPLAN >
+
+# 'design' related attributes
+#---------------------------------------------------------------------------------------------------
+# The name of the toplevel module.
+#design_name:  < PLACEHOLDER: DESIGN NAME >
+
+# The process technology node size.  Valid value is an integer.
+design_process_node: 22
+
+# The name of process and technology node size used in route related settings.
+#design_tech_node: i22
+
+route_design_process_node: i22
+
+# The flow effort optimization level {express standard extreme}.
+design_flow_effort: standard
+
+# The power effort optimization level {none low high}.
+design_power_effort: low
+
+# A YAML list of base_cell names which should be marked as dont_use
+dont_use_cells:
+#hold_dont_use
+  - ???bfm*
+#cts_dont_use
+  - ???cbf*
+ # - ???cil* ; don't set clock gating cell dont use true
+  - ???cinv*
+  - ???cdiyr*
+  - ???clb*
+  - ???cmbn*
+#eco_dont_use
+  - ???qbfn*
+  - ???qgbbf*
+  - ???qgbao*
+  - ???qgbbd*
+  - ???qgbbf*
+  - ???qgbff*
+  - ???qgbin* 
+  - ???qgblf*
+  - ???qgbmx*
+  - ???qgbna*
+  - ???qgbno*
+  - ???qgboa*
+  - ???qgbxo*
+  - ???qgbdc*
+  - ???qgbdp*
+  - ???qgbth*
+  - ???qgbtl*
+ #tie_dont_use
+  - ???ti*
+  #synch_dont_use
+  - ???fmm20*
+  - ???fmm30*
+#special_dont_use
+  - ???rev*
+# drc_dont_use
+  - ???aoi022a*n02x5
+
+# 'place' related attributes
+#---------------------------------------------------------------------------------------------------
+
+# A YAML list of tieoff cell base_cell names.
+add_tieoffs_cells:
+  - b0mtihi00an1n03x5
+  - b0mtilo00an1n03x5
+
+# The max distance between a tie-cell and the attached  loads should be less than given value.
+add_tieoffs_max_distance: 500
+
+# The max number of tie-pins a tie-net can drive. A '0' means no-limit.
+add_tieoffs_max_fanout: 10
+
+# A YAML list of filler cell base_cell names.
+add_fillers_cells:
+#Stdcell filler cells or Spacer cells
+  - b0mzdnd44an1n03x5
+  - b0mzdnd00an1n02x5
+  - b0mzdnd00an1n01x5
+
+# 'cts' related attributes
+#---------------------------------------------------------------------------------------------------
+# A YAML list of glob patterns for clock buffer cells used in CTS optimization. If none are
+# specified, base_cells from library are chosen automatically.  The base_cell's 'dont_touch' status
+# is ignored for listed cells.
+cts_buffer_cells:
+  - b0mcbf000ah1n48x5 
+  - b0mcbf000ah1n64x5 
+  - b0mcbf000ah1n32x5 
+  - b0mcbf000ah1n16x5 
+  - b0mcbf000ah1n24x5 
+  - b0mcbf000al1n64x5 
+  - b0mcbf000al1n16x5 
+  - b0mcbf000al1n48x5 
+  - b0mcbf000al1n32x5 
+  - b0mcbf000al1n24x5 
+  - b0mcbf000am1n24x5 
+  - b0mcbf000am1n48x5 
+  - b0mcbf000am1n32x5 
+  - b0mcbf000am1n64x5 
+  - b0mcbf000am1n16x5 
+  - b0mcbf000an1n64x5 
+  - b0mcbf000an1n32x5 
+  - b0mcbf000an1n24x5 
+  - b0mcbf000an1n16x5
+  - b0mcbf000an1n48x5
+
+# A YAML list of glob patterns for clock inverter cells used in CTS optimization. If none are
+# specified, base_cells from library are chosen automatically.  The base_cell's 'dont_touch' status
+# is ignored for listed cells.
+cts_inverter_cells:
+  - b0mcinv00ah1n02x5 
+  - b0mcinv00ah1n03x5 
+  - b0mcinv00ah1n04x5 
+  - b0mcinv00ah1n06x5 
+  - b0mcinv00ah1n08x5 
+  - b0mcinv00ah1n12x5 
+  - b0mcinv00ah1n16x5 
+  - b0mcinv00ah1n20x5 
+  - b0mcinv00ah1n24x5 
+  - b0mcinv00ah1n28x5 
+  - b0mcinv00ah1n32x5 
+  - b0mcinv00ah1n40x5 
+  - b0mcinv00ah1n48x5 
+  - b0mcinv00ah1n56x5 
+  - b0mcinv00ah1n64x5 
+  - b0mcinv00ah1n80x5 
+  - b0mcinv00al1n02x5 
+  - b0mcinv00al1n03x5 
+  - b0mcinv00al1n04x5 
+  - b0mcinv00al1n06x5 
+  - b0mcinv00al1n08x5 
+  - b0mcinv00al1n12x5 
+  - b0mcinv00al1n16x5 
+  - b0mcinv00al1n20x5 
+  - b0mcinv00al1n24x5 
+  - b0mcinv00al1n28x5 
+  - b0mcinv00al1n32x5 
+  - b0mcinv00al1n40x5 
+  - b0mcinv00al1n48x5 
+  - b0mcinv00al1n56x5 
+  - b0mcinv00al1n64x5 
+  - b0mcinv00al1n80x5 
+  - b0mcinv00am1n02x5 
+  - b0mcinv00am1n03x5 
+  - b0mcinv00am1n04x5 
+  - b0mcinv00am1n06x5 
+  - b0mcinv00am1n08x5 
+  - b0mcinv00am1n12x5 
+  - b0mcinv00am1n16x5 
+  - b0mcinv00am1n20x5 
+  - b0mcinv00am1n24x5 
+  - b0mcinv00am1n28x5 
+  - b0mcinv00am1n32x5 
+  - b0mcinv00am1n40x5 
+  - b0mcinv00am1n48x5 
+  - b0mcinv00am1n56x5 
+  - b0mcinv00am1n64x5 
+  - b0mcinv00am1n80x5 
+  - b0mcinv00an1n02x5 
+  - b0mcinv00an1n03x5 
+  - b0mcinv00an1n04x5 
+  - b0mcinv00an1n06x5 
+  - b0mcinv00an1n08x5 
+  - b0mcinv00an1n12x5 
+  - b0mcinv00an1n16x5 
+  - b0mcinv00an1n20x5 
+  - b0mcinv00an1n24x5 
+  - b0mcinv00an1n28x5 
+  - b0mcinv00an1n32x5 
+  - b0mcinv00an1n40x5 
+  - b0mcinv00an1n48x5 
+  - b0mcinv00an1n56x5 
+  - b0mcinv00an1n64x5 
+  - b0mcinv00an1n80x5
+
+# A YAML list of glob patterns for clock gate cells to be inserted and optimized. If none are
+# specified, base_cells from library are chosen automatically.  The base_cell's 'dont_touch' status
+# is ignored for listed cells.
+cts_clock_gating_cells:
+  - b0mcilb05ah1n24x5
+  - b0mcilb05ah1n48x5 
+  - b0mcilb05ah1n16x5 
+  - b0mcilb05ah1n64x5 
+  - b0mcilb05ah1n32x5 
+  - b0mcilb05am1n48x5 
+  - b0mcilb05am1n64x5 
+  - b0mcilb05am1n32x5 
+  - b0mcilb05am1n24x5 
+  - b0mcilb05am1n16x5 
+  - b0mcilb05hl1n16x5 
+  - b0mcilb05hl1n24x5 
+  - b0mcilb05hl1n64x5 
+  - b0mcilb05hl1n32x5 
+  - b0mcilb05hl1n48x5 
+  - b0mcilb05hn1n48x5 
+  - b0mcilb05hn1n16x5 
+  - b0mcilb05hn1n32x5 
+  - b0mcilb05hn1n24x5 
+  - b0mcilb05hn1n64x5
+  - b0mcil????h*
+
+# A YAML list of glob patterns for clock logic cells used in CTS optimization. If none are
+# specified, base_cells from library are chosen automatically.  The base_cell's 'dont_touch' status
+# is ignored for listed cells.
+cts_logic_cells:
+  - ???clb????*
+  - ???cmbn???*
+  - ???cand???*
+  - ???corn???*
+
+
+# The target skew used for clock tree synthesis. Valid values are: default | auto | ignore | double
+# .
+cts_target_skew: auto
+
+# The target slew used for clock tree synthesis. This attribute specifies a maximum slew time that
+# the clock tree synthesis algorithm will allow in library units.
+cts_target_max_transition_time:
+  top:   100
+  trunk: 100
+  leaf:  100
+
+# 'route' related attributes
+#---------------------------------------------------------------------------------------------------
+# The names of top and bottom metal layers to use for global and detail routing.
+routing_layers:
+  top:      m8
+  bottom:   m2
+  pg: m8
+#routing_layers pg is removed in version 20, need to confirm with CDNS
+# The base_cell name to use for antenna violation fixing.
+route_design_antenna_cell_name: b0mydp141an1n03x5
+
+# 'timing' related attributes
+#---------------------------------------------------------------------------------------------------
+# Enable AOCV during timing analysis (may not be enabled if using SOCV).
+timing_analysis_aocv: false
+
+# Enable SOCV during timing analysis (may not be enabled if using AOCV).
+timing_analysis_socv: true
+
+# Layer map file that translates Innovus layer names to OAS/GDS layer:datatype
+#  Example:
+#       layer_map: $env(INTEL_PDK)/apr/cadence/dot7/p1274.cdns_gds.map
+layer_map:  $env(INTEL_PDK)/apr/cadence/$env(LAYERSTACK)/6t108_tp0/p1222.cdns_gds.map
+
+# List of GDS or OASIS files to merge during fill or design output
+# Example:
+#   cell_layout_files:
+#     - $env(INTEL_STDCELLS)/oasis/f05ln.oas
+cell_layout_files:
+  - $env(INTEL_STDCELLS)/base_lvt/oasis/lib224_b0m_6t_108pp_base_lvt.oas
+  - $env(INTEL_STDCELLS)/lvl_lvt/oasis/lib224_b0m_6t_108pp_lvl_lvt.oas
+  - $env(INTEL_STDCELLS)/pwm_lvt/oasis/lib224_b0m_6t_108pp_pwm_lvt.oas
+  - $env(INTEL_STDCELLS)/seq_lvt/oasis/lib224_b0m_6t_108pp_seq_lvt.oas
+  - $env(INTEL_STDCELLS)/spcl_lvt/oasis/lib224_b0m_6t_108pp_spcl_lvt.oas
+  - $env(INTEL_STDCELLS)/base_lplvt/oasis/lib224_b0m_6t_108pp_base_lplvt.oas
+  - $env(INTEL_STDCELLS)/lvl_lplvt/oasis/lib224_b0m_6t_108pp_lvl_lplvt.oas
+  - $env(INTEL_STDCELLS)/pwm_lplvt/oasis/lib224_b0m_6t_108pp_pwm_lplvt.oas
+  - $env(INTEL_STDCELLS)/seq_lplvt/oasis/lib224_b0m_6t_108pp_seq_lplvt.oas
+  - $env(INTEL_STDCELLS)/spcl_lplvt/oasis/lib224_b0m_6t_108pp_spcl_lplvt.oas
+  - $env(INTEL_STDCELLS)/base_nom/oasis/lib224_b0m_6t_108pp_base_nom.oas
+  - $env(INTEL_STDCELLS)/lvl_nom/oasis/lib224_b0m_6t_108pp_lvl_nom.oas
+  - $env(INTEL_STDCELLS)/pwm_nom/oasis/lib224_b0m_6t_108pp_pwm_nom.oas
+  - $env(INTEL_STDCELLS)/seq_nom/oasis/lib224_b0m_6t_108pp_seq_nom.oas
+  - $env(INTEL_STDCELLS)/spcl_nom/oasis/lib224_b0m_6t_108pp_spcl_nom.oas
+  - $env(INTEL_STDCELLS)/base_ulp/oasis/lib224_b0m_6t_108pp_base_ulp.oas
+  - $env(INTEL_STDCELLS)/lvl_ulp/oasis/lib224_b0m_6t_108pp_lvl_ulp.oas
+  - $env(INTEL_STDCELLS)/pwm_ulp/oasis/lib224_b0m_6t_108pp_pwm_ulp.oas
+  - $env(INTEL_STDCELLS)/seq_ulp/oasis/lib224_b0m_6t_108pp_seq_ulp.oas
+  - $env(INTEL_STDCELLS)/spcl_ulp/oasis/lib224_b0m_6t_108pp_spcl_ulp.oas
+  - $env(INTEL_STDCELLS)/base_ulvt/oasis/lib224_b0m_6t_108pp_base_ulvt.oas
+  - $env(INTEL_STDCELLS)/lvl_ulvt/oasis/lib224_b0m_6t_108pp_lvl_ulvt.oas
+  - $env(INTEL_STDCELLS)/pwm_ulvt/oasis/lib224_b0m_6t_108pp_pwm_ulvt.oas
+  - $env(INTEL_STDCELLS)/seq_ulvt/oasis/lib224_b0m_6t_108pp_seq_ulvt.oas
+  - $env(INTEL_STDCELLS)/spcl_ulvt/oasis/lib224_b0m_6t_108pp_spcl_ulvt.oas
+  - $env(INTEL_STDCELLS)/base_lp/oasis/lib224_b0m_6t_108pp_base_lp.oas
+  - $env(INTEL_STDCELLS)/lvl_lp/oasis/lib224_b0m_6t_108pp_lvl_lp.oas
+  - $env(INTEL_STDCELLS)/pwm_lp/oasis/lib224_b0m_6t_108pp_pwm_lp.oas
+  - $env(INTEL_STDCELLS)/seq_lp/oasis/lib224_b0m_6t_108pp_seq_lp.oas
+  - $env(INTEL_STDCELLS)/spcl_lp/oasis/lib224_b0m_6t_108pp_spcl_lp.oas
+  - $env(INTEL_STDCELLS)/base_hp/oasis/lib224_b0m_6t_108pp_base_hp.oas
+  - $env(INTEL_STDCELLS)/lvl_hp/oasis/lib224_b0m_6t_108pp_lvl_hp.oas
+  - $env(INTEL_STDCELLS)/pwm_hp/oasis/lib224_b0m_6t_108pp_pwm_hp.oas
+  - $env(INTEL_STDCELLS)/seq_hp/oasis/lib224_b0m_6t_108pp_seq_hp.oas
+  - $env(INTEL_STDCELLS)/spcl_hp/oasis/lib224_b0m_6t_108pp_spcl_hp.oas
+  - $env(INTEL_PDK)/libraries/tic/oasis/$env(LAYERSTACK)/intel22tic.oas

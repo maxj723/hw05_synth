@@ -1,0 +1,18 @@
+DEFINE worklib ../sim/worklib
+
+# Define a set of mappings
+
+DEFINE LIB_MAP (./ => worklib)
+
+# Define a set of views
+# Files with .vb extension are compiled into view beh 
+# Files with .vr extension are compiled into view rtl 
+# Files with .vg extension are compiled into view gates 
+# Files with .v extension are compiled into view module 
+DEFINE VIEW_MAP (.vb => beh, \
+                 .vr => rtl, \
+                 .vg => gates, \
+                 .v => module)
+
+
+

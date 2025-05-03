@@ -1,0 +1,25 @@
+# test_mem.s
+.globl _start
+_start:
+  # Store value 42 to address 0x100
+  addi x1, x0, 42     # x1 = 42
+  addi x2, x0, 0x100  # x2 = 256 (address)
+  sw   x1, 0(x2)      # Store x1 (42) to Mem[256]
+
+  # Load value back from 0x100 into x3
+  lw   x3, 0(x2)      # Load Mem[256] into x3
+
+  # Store value -1 to address 0x104
+  addi x4, x0, -1     # x4 = -1
+  sw   x4, 4(x2)      # Store x4 (-1) to Mem[260]
+
+  # Load value back from 0x104 into x5
+  lw   x5, 4(x2)      # Load Mem[260] into x5
+
+  # Test writing to x0, then reading from x0 (should be 0)
+  sw   x1, 8(x2)      # Store 42 to Mem[264]
+  lw   x0, 8(x2)      # Attempt to load 42 into x0 (should remain 0)
+  add  x6, x0, x0     # x6 = x0 + x0 = 0 + 0 = 0
+
+halt:
+  j halt

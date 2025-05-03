@@ -1,0 +1,31 @@
+##############################################################################
+
+# STEP add_clock_route_types
+
+##############################################################################
+
+create_flow_step -name add_clock_route_types -owner design {
+
+set clock_list [get_db clock_trees .name]
+set ndr_route_rule_top "ndr_wideW_m3_m8"
+
+
+
+foreach clk $clock_list {
+
+    create_route_type -name clk_trunk_$clk -route_rule $ndr_route_rule_top -top_preferred_layer 8 -bottom_preferred_layer  3 -preferred_routing_layer_effort high 
+
+    set_db cts_route_type_top clk_trunk_$clk
+    set_db cts_route_type_trunk clk_trunk_$clk
+
+    create_route_type -name clk_leaf_$clk -top_preferred_layer 8 -bottom_preferred_layer 3 -preferred_routing_layer_effort high
+
+    set_db cts_route_type_leaf  clk_leaf_$clk 
+}
+
+#To use default width tracks for clocks with shielding applied, please remove 'route_rule' attribute from 'create_route_type'
+#For example, 
+#create_route_type -name clk_trunk_$clk -top_preferred_layer 8 -bottom_preferred_layer  3 -preferred_routing_layer_effort high -shield_net [get_flow_config init_ground_nets] -shield_side both_side
+#This will create a route type for default widths and apply shield on both sides of clock net
+
+}

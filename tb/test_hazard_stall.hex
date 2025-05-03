@@ -1,0 +1,14 @@
+# test_hazard_stall.s
+.globl _start
+_start:
+  # Setup: Store 77 at address 0x80
+  addi x1, x0, 77     # x1 = 77
+  addi x2, x0, 0x80   # x2 = 128 (address)
+  sw   x1, 0(x2)      # Store 77 to Mem[128]
+
+  # Load followed immediately by use - requires STALL
+  lw   x3, 0(x2)      # Load Mem[128] into x3. Value available end of MEM stage (cycle N+3)
+  addi x4, x3, 1      # Use x3. Needs x3 in EX stage (cycle N+2). Requires 1 cycle stall + MEM->EX forward.
+
+halt:
+  j halt
