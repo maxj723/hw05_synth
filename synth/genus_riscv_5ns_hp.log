@@ -1,0 +1,27 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[13:55:25.417705] Configured Lic search path (21.01-s002): /escnfs/home/csesoft/cadence/installs/license.txt
+
+Version: 21.18-s082_1, built Tue Jul 18 10:08:41 PDT 2023
+Options: -files synth_step_by_step.tcl -log genus_riscv_5ns_hp.log 
+Date:    Sat May 03 13:55:25 2025
+Host:    student06.cse.nd.edu (x86_64 w/Linux 3.10.0-1160.11.1.el7.x86_64) (4cores*8cpus*2physical cpus*Quad-Core AMD Opteron(tm) Processor 2356 512KB) (32845376KB)
+PID:     15981
+OS:      Red Hat Enterprise Linux Server release 7.7 (Maipo)
+
+
+[13:55:25.442843] Periodic Lic check successful
+[13:55:25.442859] Feature usage summary:
+[13:55:25.442865] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...

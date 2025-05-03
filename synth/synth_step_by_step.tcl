@@ -5,8 +5,8 @@
 set LIB_PATH /escnfs/courses/sp25-cse-40762.01/public/intel16libs_2025/std_cells
 
 # I'm doing this explicitly, but tcl lets you glob
-set seq_lib ${LIB_PATH}/lib224_b15_7t_108pp_seq_nom_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
-set base_lib ${LIB_PATH}/lib224_b15_7t_108pp_base_nom_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
+set seq_lib ${LIB_PATH}/lib224_b15_7t_108pp_base_hp_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
+set base_lib ${LIB_PATH}/lib224_b15_7t_108pp_seq_hp_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
 
 # we've got a sequential and a combinational logic library to use
 read_libs [list $seq_lib $base_lib]
@@ -77,9 +77,9 @@ set_db [get_db lib_cells *b0mc*] .dont_use true
 syn_opt
 
 # get the timing and power reports
-report_timing > reports/riscv_stub_timing.rpt
-report_area > reports/riscv_stub_area.rpt
-report_power > reports/riscv_stub_power.rpt
+report_timing > reports/riscv_stub_timing_5ns_hp.rpt
+report_area > reports/riscv_stub_area_5ns_hp.rpt
+report_power > reports/riscv_stub_power_5ns_hp.rpt
 
 # write out the relevant files
 write_db ${DESIGN_NAME} -to_file ${DESIGN_NAME}.db 
