@@ -77,9 +77,9 @@ set_db [get_db lib_cells *b0mc*] .dont_use true
 syn_opt
 
 # get the timing and power reports
-report_timing > reports/riscv_stub_timing.rpt
-report_area > reports/riscv_stub_area.rpt
-report_power > reports/riscv_stub_power.rpt
+report_timing > reports/riscv_stub_timing_2ns_rvt.rpt
+report_area > reports/riscv_stub_area_2ns_rvt.rpt
+report_power > reports/riscv_stub_power_2ns_rvt.rpt
 
 # write out the relevant files
 write_db ${DESIGN_NAME} -to_file ${DESIGN_NAME}.db 

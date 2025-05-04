@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 21.18-s082_1 on Sat May 03 16:15:06 EDT 2025
+#  Created by Genus(TM) Synthesis Solution 21.18-s082_1 on Sat May 03 18:17:05 EDT 2025
 
 # ####################################################################
 
@@ -12,7 +12,7 @@ set_units -time 1000ps
 # Set the current design
 current_design riscv_stub
 
-create_clock -name "clk" -period 5000.0 -waveform {0.0 2500.0} [get_ports clk]
+create_clock -name "clk" -period 2000.0 -waveform {0.0 1000.0} [get_ports clk]
 set_load -pin_load 50.0 [get_ports {instr_addr[31]}]
 set_load -pin_load 50.0 [get_ports {instr_addr[30]}]
 set_load -pin_load 50.0 [get_ports {instr_addr[29]}]

@@ -1,7 +1,7 @@
 # riscv_stub.sdc
   
 # Define clock
-create_clock -name clk -period 5000 [get_ports clk]
+create_clock -name clk -period 2000 [get_ports clk]
 set_clock_uncertainty -setup 50 [get_clocks clk]
 set_clock_uncertainty -hold 50 [get_clocks clk]
 

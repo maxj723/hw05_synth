@@ -7352,20 +7352,20 @@
 "object":"/designs/riscv_stub/instances_seq/reg_file_reg[31][31]",
 "type":"instance"},
 {"index": "1", 
- "date": "Sat May 03 20:14:29 UTC 2025",
- "seconds": 1746303269.917137,
+ "date": "Sat May 03 22:16:26 UTC 2025",
+ "seconds": 1746310586.245689,
  "netlist": "fv/riscv_stub/fv_map.v.gz", 
  "netlist_exists": "1", 
  "netlist_normalize": "/escnfs/home/mjohns79/soc_design_hw/hw05_synth/synth/fv/riscv_stub/fv_map.v.gz", 
- "netlist_mtime": "1746303262", 
- "netlist_timestamp": "Sat May 03 20:14:22 UTC 2025", 
- "netlist_size": "81973", 
- "netlist_cksum": "2080453953", 
+ "netlist_mtime": "1746310579", 
+ "netlist_timestamp": "Sat May 03 22:16:19 UTC 2025", 
+ "netlist_size": "82644", 
+ "netlist_cksum": "3943640250", 
  "design_name": "riscv_stub", 
  "synth_workdir": "/escnfs/home/mjohns79/soc_design_hw/hw05_synth/synth", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 7.193842999999999 
+ "write_verif_file_runtime": 7.0178329999999995 
  }
 ]
