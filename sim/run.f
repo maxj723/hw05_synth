@@ -1,7 +1,6 @@
 # Source files
-../src/riscv_stub.sv
-../tb/memories.sv
-../tb/riscv_stub_tb.sv
+../src/my_project.sv
+../tb/my_project_tb.sv
 
 # Top-level module
 -top riscv_stub_tb
