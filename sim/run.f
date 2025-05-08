@@ -3,7 +3,7 @@
 ../tb/my_project_tb.sv
 
 # Top-level module
--top riscv_stub_tb
+-top my_project_tb
 
 # Simulation options
 # -access +rwc
