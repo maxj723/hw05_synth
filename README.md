@@ -2,6 +2,9 @@ Max Johnson
 
 902204711
 
+Group members: Dan Schrage, Sean Dougherty
+
+
 my_project.sv is a simple matrix multiplier. It defaults to N=4 which means it can multiply two 4x4 matrices. The top module takes 3 inputs--a start signal, the first matrix A, and the second matrix B. Both matrices must be made of 8 bit numbers. Then it outputs a 4x4 matrix C and a done signal. The start signal notifies the module to start computing the output. The done signal notifies that the final answer is ready.
 
 
