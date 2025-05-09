@@ -1,0 +1,9 @@
+# IO plan for my_project
+# Side Port Name Direction
+NORTH clk input
+NORTH reset input
+WEST A[7:0] input
+WEST B[7:0] input
+EAST C[15:0] output
+EAST done output
+SOUTH start input
