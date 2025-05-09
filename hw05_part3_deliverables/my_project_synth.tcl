@@ -5,8 +5,8 @@
 set LIB_PATH /escnfs/courses/sp25-cse-40762.01/public/intel16libs_2025/std_cells
 
 # I'm doing this explicitly, but tcl lets you glob
-set seq_lib ${LIB_PATH}/lib224_b15_7t_108pp_seq_nom_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
-set base_lib ${LIB_PATH}/lib224_b15_7t_108pp_base_nom_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
+set seq_lib ${LIB_PATH}/lib224_b15_7t_108pp_seq_hp_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
+set base_lib ${LIB_PATH}/lib224_b15_7t_108pp_base_hp_tttt_0p950v_25c_tttt_ctyp_nldm.lib.gz
 
 # we've got a sequential and a combinational logic library to use
 read_libs [list $seq_lib $base_lib]
@@ -23,13 +23,12 @@ set_db remove_assigns true
 set RTL_PATH ../src/
 
 # set your top module name
-set DESIGN_NAME riscv_stub
+set DESIGN_NAME my_project
 
 # I'm reading all the system verilog files in there
-foreach file [glob -nocomplain -type f $RTL_PATH/*.sv] {
-	puts "Reading file: $file"
-	read_hdl -sv $file
-}
+
+read_hdl -sv $RTL_PATH/my_project.sv
+
 
 
 # need to elaborate before doing any synthesis
@@ -43,10 +42,8 @@ set CONST_PATH ./constraints
 
 current_design [get_db designs  $DESIGN_NAME]
 
-foreach file [glob -nocomplain -type f $CONST_PATH/*.sdc] {
-	puts "Reading file: $file"
-	read_sdc $file
-}
+read_sdc $CONST_PATH/my_project.sdc
+
 
 # generic synthesis steps
 set_db / .syn_generic_effort medium
@@ -77,9 +74,9 @@ set_db [get_db lib_cells *b0mc*] .dont_use true
 syn_opt
 
 # get the timing and power reports
-report_timing > reports/riscv_stub_timing_2ns_rvt.rpt
-report_area > reports/riscv_stub_area_2ns_rvt.rpt
-report_power > reports/riscv_stub_power_2ns_rvt.rpt
+report_timing > my_project_reports/my_project_timing.rpt
+report_area > my_project_reports/my_project_area.rpt
+report_power > my_project_reports/my_project_power.rpt
 
 # write out the relevant files
 write_db ${DESIGN_NAME} -to_file ${DESIGN_NAME}.db 

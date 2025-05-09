@@ -1,0 +1,1 @@
+The matrix multiplier synthesized with no errors. The module was synthesized using the high power standard cell library. It passed timing with 4949.283 ns of slack, so it could have used a faster clock. Additionally, it uses 1.36590e-06 W of leakage power and 1.41606e-04 W dynamic power. Finally, it has a totally area of 1441.563 μm^2.
